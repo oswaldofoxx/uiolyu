@@ -1,0 +1,32 @@
+2019-06-07 02:38:59 Error: [PDOException] SQLSTATE[HY000] [1045] Access denied for user 'my_app'@'localhost' (using password: YES) in /home/u20182833/public_html/my_project/vendor/cakephp/cakephp/src/Database/Driver.php on line 92
+Stack Trace:
+#0 /home/u20182833/public_html/my_project/vendor/cakephp/cakephp/src/Database/Driver.php(92): PDO->__construct('mysql:host=loca...', 'my_app', 'secret', Array)
+#1 /home/u20182833/public_html/my_project/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php(106): Cake\Database\Driver->_connect('mysql:host=loca...', Array)
+#2 /home/u20182833/public_html/my_project/vendor/cakephp/cakephp/src/Database/Schema/BaseSchema.php(45): Cake\Database\Driver\Mysql->connect()
+#3 /home/u20182833/public_html/my_project/vendor/cakephp/cakephp/src/Database/Dialect/MysqlDialectTrait.php(63): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 /home/u20182833/public_html/my_project/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(52): Cake\Database\Driver\Mysql->schemaDialect()
+#5 /home/u20182833/public_html/my_project/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php(42): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 /home/u20182833/public_html/my_project/vendor/cakephp/cakephp/src/Database/Connection.php(391): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 /home/u20182833/public_html/my_project/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(1094): Cake\Database\Connection->getSchemaCollection()
+#8 /home/u20182833/public_html/my_project/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(1048): Bake\Shell\Task\ModelTask->_getAllTables()
+#9 /home/u20182833/public_html/my_project/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(213): Bake\Shell\Task\ModelTask->listAll()
+#10 /home/u20182833/public_html/my_project/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#11 /home/u20182833/public_html/my_project/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'roles', 'Roles')
+#12 /home/u20182833/public_html/my_project/vendor/cakephp/bake/src/Shell/Task/ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Roles')
+#13 /home/u20182833/public_html/my_project/vendor/cakephp/bake/src/Shell/BakeShell.php(279): Bake\Shell\Task\ModelTask->main('Roles')
+#14 /home/u20182833/public_html/my_project/vendor/cakephp/cakephp/src/Collection/CollectionTrait.php(51): Bake\Shell\BakeShell->Bake\Shell\{closure}('Roles', 0)
+#15 /home/u20182833/public_html/my_project/vendor/cakephp/bake/src/Shell/BakeShell.php(280): Cake\Collection\Collection->each(Object(Closure))
+#16 /home/u20182833/public_html/my_project/vendor/cakephp/cakephp/src/Console/Shell.php(518): Bake\Shell\BakeShell->all('roles')
+#17 /home/u20182833/public_html/my_project/vendor/cakephp/cakephp/src/Console/CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#18 /home/u20182833/public_html/my_project/vendor/cakephp/cakephp/src/Console/CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#19 /home/u20182833/public_html/my_project/bin/cake.php(12): Cake\Console\CommandRunner->run(Array)
+#20 {main}
+
+
+2019-06-08 00:24:42 Error: [RuntimeException] Unknown command `cake all`. Run `cake --help` to get the list of valid commands. in /home/u20182833/public_html/my_project/vendor/cakephp/cakephp/src/Console/CommandRunner.php on line 346
+Stack Trace:
+#0 /home/u20182833/public_html/my_project/vendor/cakephp/cakephp/src/Console/CommandRunner.php(157): Cake\Console\CommandRunner->resolveName(Object(Cake\Console\CommandCollection), Object(Cake\Console\ConsoleIo), 'all')
+#1 /home/u20182833/public_html/my_project/bin/cake.php(12): Cake\Console\CommandRunner->run(Array)
+#2 {main}
+
+
